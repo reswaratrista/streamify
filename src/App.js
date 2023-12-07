@@ -1,15 +1,21 @@
-import logo from './logo.svg';
+// App.js
 import './App.css';
-import Footer from './components/footer.tsx';
-import FeatureCard from './components/featureCard.tsx';
-import Header from './components/header.tsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home.tsx';
+import RecommendAnything from './pages/RecommendAnything.tsx';
+import RecommendMood from './pages/RecommendMood.tsx';
+import WatchHistory from './pages/WatchHistory.tsx';
 
 function App() {
   return (
-    <div className="App">
-      <FeatureCard/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recommend-anything" element={<RecommendAnything />} />
+        <Route path="/recommend-mood" element={<RecommendMood />} />
+        <Route path="/watch-history" element={<WatchHistory />} />
+      </Routes>
+    </Router>
   );
 }
 

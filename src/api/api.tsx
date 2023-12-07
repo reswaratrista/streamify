@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const url = "https://tubes-tst-production.up.railway.app/";
+const url = "http://localhost:8000";
 
 export const post = async (
   api: string,
@@ -15,12 +15,11 @@ export const post = async (
 
 export const postWithAuth = async (
   api: string,
-  form: any,
-  token: string
+  form: any
 ): Promise<AxiosResponse<any, any>> => {
+  const token = localStorage.getItem('accessToken');
   return await axios.post(url + api, form, {
     headers: {
-      // Accept: "multipart/form-data",
       "Content-Type": "application/x-www-form-urlencoded",
       Authorization: "Bearer " + token,
     },
@@ -29,9 +28,9 @@ export const postWithAuth = async (
 
 export const postWithAuthJson = async (
   api: string,
-  json: any,
-  token: string
+  json: any
 ): Promise<AxiosResponse<any, any>> => {
+  const token = localStorage.getItem('accessToken');
   return await axios.post(url + api, json, {
     headers: {
       "Content-Type": "application/json",
@@ -47,9 +46,9 @@ export const get = async (
 };
 
 export const getWithAuth = async (
-  token: string,
   apiParams: string
 ): Promise<AxiosResponse<any, any>> => {
+  const token = localStorage.getItem('accessToken');
   return await axios.get(url + apiParams, {
     headers: {
       Accept: "application/json",
@@ -60,9 +59,9 @@ export const getWithAuth = async (
 };
 
 export const deleteWithAuth = async (
-  api: string,
-  token: string
+  api: string
 ): Promise<AxiosResponse<any, any>> => {
+  const token = localStorage.getItem('accessToken');
   return await axios.delete(url + api, {
     headers: {
       Authorization: "Bearer " + token,

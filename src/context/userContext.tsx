@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { getWithAuth } from "../api/api";
+import { getWithAuth } from "../api/Api";
 import { toastError } from "../components/toast";
 import React from "react";
 
