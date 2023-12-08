@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getWithAuth, postWithAuthJson } from '../api/Api.tsx';
+import { getWithAuth, postWithAuthJson } from '../api/api.tsx';
 
 interface WatchMovieModalProps {
   movieName: string;

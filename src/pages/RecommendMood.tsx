@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getWithAuth } from '../api/Api.tsx';
+import { getWithAuth } from '../api/api.tsx';
 import Header from '../components/header.tsx';
 import Footer from '../components/footer.tsx';
 

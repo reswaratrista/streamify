@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/header.tsx';
 import Footer from '../components/footer.tsx';
-import { getWithAuth } from '../api/Api.tsx';
+import { getWithAuth } from '../api/api.tsx';
 
 interface WatchHistory {
   historyId: number;

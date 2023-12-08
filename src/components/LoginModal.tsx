@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { post } from '../api/Api.tsx';
+import { post } from '../api/api.tsx';
 
 const LoginModal = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState('');

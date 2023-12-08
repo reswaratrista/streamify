@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { postWithAuthJson } from '../api/Api.tsx';
+import { postWithAuthJson } from '../api/api.tsx';
 
 const RegisterModal = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState('');
