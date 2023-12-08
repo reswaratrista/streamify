@@ -12,7 +12,7 @@ interface Movie {
 const RecommendMood = () => {
   const [data, setData] = useState<Movie[]>([]);
   const [mood, setMood] = useState('');
-  const [maxAmount, setMaxAmount] = useState(20);
+  const [maxAmount, setMaxAmount] = useState(0);
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const RecommendMood = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto p-4 mt-20">
+      <div className="container mx-auto p-4 mt-20 mb-24">
         <h1 className="text-3xl font-bold mt-24 mb-4">Recommend by Mood</h1>
         <form onSubmit={handleFormSubmit} className="mb-8">
           <label className="block mb-2">Mood:</label>

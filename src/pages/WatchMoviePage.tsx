@@ -38,7 +38,7 @@ const WatchMoviePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative">
+    <div className="flex flex-col items-center justify-center min-h-screen relative mb-32">
       <Header />
       <h1 className="text-3xl font-bold mt-32 mb-8">Explore Movies</h1>
       <div className="space-y-4 mb">

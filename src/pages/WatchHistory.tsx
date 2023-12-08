@@ -58,7 +58,7 @@ const WatchHistoryPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <Header />
-      <div className="container mx-auto p-4 mt-24 mb-20">
+      <div className="container mx-auto p-4 mt-24 mb-24">
         <h1 className="text-3xl font-bold mb-4">Watch History</h1>
         {/* Render the watch history data */}
         {watchHistory.map((historyItem) => (

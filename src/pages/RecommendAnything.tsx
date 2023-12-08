@@ -30,7 +30,7 @@ const RecommendAnything = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto p-4 mt-20">
+      <div className="container mx-auto p-4 mt-20 mb-24">
         <h1 className="text-3xl font-bold mt-24 mb-8">Recommend Anything</h1>
         <form onSubmit={handleFormSubmit} className="mb-8">
           <label className="block mb-2">Amount:</label>
@@ -49,7 +49,7 @@ const RecommendAnything = () => {
           </button>
         </form>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-y-auto">
           {data && data.length > 0 ? (
             <table className="min-w-full">
               <thead>
