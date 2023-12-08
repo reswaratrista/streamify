@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+RUN ls -la
+
 RUN npm run build
 
 RUN npm install -g serve
