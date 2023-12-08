@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Header from '../components/Header.tsx';
-import FeatureCard from '../components/FeatureCard.tsx';
-import Footer from '../components/Footer.tsx';
+import Header from '../components/header.tsx';
+import FeatureCard from '../components/featureCard.tsx';
+import Footer from '../components/footer.tsx';
 import Notification from '../components/Notification.tsx';
 
 interface Movies {

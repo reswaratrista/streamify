@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
+import Header from '../components/header.tsx';
+import Footer from '../components/footer.tsx';
 import { get } from '../api/Api.tsx'; // Import your API function for making GET requests
 import WatchMovieModal from '../components/WatchMovieModal.tsx'; // Import the WatchMovieModal component
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
+import Header from '../components/header.tsx';
+import Footer from '../components/footer.tsx';
 import { getWithAuth } from '../api/Api.tsx';
 
 interface Movies {

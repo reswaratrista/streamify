@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getWithAuth } from '../api/Api.tsx';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
+import Header from '../components/header.tsx';
+import Footer from '../components/footer.tsx';
 
 interface Movie {
   movie_id: number;
