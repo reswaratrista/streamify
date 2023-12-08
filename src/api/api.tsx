@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const url = "http://localhost:8000";
+const url = "https://tubes-tst-production.up.railway.app";
 
 export const post = async (
   api: string,

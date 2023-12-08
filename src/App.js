@@ -5,6 +5,7 @@ import Home from './pages/Home.tsx';
 import RecommendAnything from './pages/RecommendAnything.tsx';
 import RecommendMood from './pages/RecommendMood.tsx';
 import WatchHistory from './pages/WatchHistory.tsx';
+import WatchMoviePage from './pages/WatchMoviePage.tsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/recommend-anything" element={<RecommendAnything />} />
         <Route path="/recommend-mood" element={<RecommendMood />} />
         <Route path="/watch-history" element={<WatchHistory />} />
+        <Route path="/watch-movie" element={<WatchMoviePage/>} />
       </Routes>
     </Router>
   );

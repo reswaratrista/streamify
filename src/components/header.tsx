@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LoginModal from './LoginModal.tsx';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import RegisterModal from './RegisterModal.tsx';
 
 const Header = (props) => {
+  const navigate = useNavigate();
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);  // State for RegisterModal
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
 
   useEffect(() => {
@@ -20,11 +24,21 @@ const Header = (props) => {
     setLoginModalOpen(false);
   };
 
+  const openRegisterModal = () => {
+    setRegisterModalOpen(true);
+  };
+
+  const closeRegisterModal = () => {
+    setRegisterModalOpen(false);
+  };
+
+
   const handleLogout = () => {
     // Remove the token from local storage
     localStorage.removeItem('accessToken');
     // Update the state to reflect the user being logged out
     setIsLoggedIn(false);
+    navigate('/');
   };
 
   return (
@@ -37,20 +51,26 @@ const Header = (props) => {
           </div>
         </Link>
         <div className="flex items-center space-x-4">
-          {isLoggedIn ? (
+          {/* Show "Register" or "Login" based on the login status */}
+          {!isLoggedIn ? (
+            <>
+              <button className="text-white" onClick={openRegisterModal}>
+                Register
+              </button>
+              <button className="text-white" onClick={openLoginModal}>
+                Login
+              </button>
+            </>
+          ) : (
             // If logged in, show a logout button
             <button className="text-white" onClick={handleLogout}>
               Logout
-            </button>
-          ) : (
-            // If not logged in, show a login button
-            <button className="text-white" onClick={openLoginModal}>
-              Login
             </button>
           )}
         </div>
       </div>
       <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />
+      <RegisterModal isOpen={isRegisterModalOpen} onClose={closeRegisterModal} />  {/* Render RegisterModal */}
     </header>
   );
 };
