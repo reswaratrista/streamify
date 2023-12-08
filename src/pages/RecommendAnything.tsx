@@ -31,7 +31,7 @@ const RecommendAnything = () => {
     <div>
       <Header />
       <div className="container mx-auto p-4 mt-20">
-        <h1 className="text-2xl font-bold mb-4">Recommend Anything</h1>
+        <h1 className="text-3xl font-bold mt-24 mb-8">Recommend Anything</h1>
         <form onSubmit={handleFormSubmit} className="mb-8">
           <label className="block mb-2">Amount:</label>
           <input
